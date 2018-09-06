@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityFragment"
+    tools:showIn="@layout/activity_main">
+    <LinearLayout
+        android:id="@+id/rv_header"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:weightSum="5">
+
+        <TextView
+            android:id="@+id/id_header"
+            style="@style/CurrencyHeaderTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:text="@string/id_text"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:id="@+id/name_header"
+            style="@style/CurrencyHeaderTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.3"
+            android:text="@string/name_text"
+            android:ellipsize="end"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/slug_header"
+            style="@style/CurrencyHeaderTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:text="@string/slug_text"
+            android:textAlignment="textEnd" />
+
+        <TextView
+            android:id="@+id/symbol_header"
+            style="@style/CurrencyHeaderTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/symbol_text"
+            android:textAlignment="textEnd"
+            android:ellipsize="end"
+            android:layout_weight="0.7" />
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@id/rv_header"
+        android:id="@+id/currenciesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/currency_rv_item" />
+
+</RelativeLayout>
